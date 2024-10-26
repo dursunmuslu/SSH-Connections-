@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    container_name: sshconnection
+    environment:
+      POSTGRES_DB: sshdb
+      POSTGRES_USER: sshproject
+      POSTGRES_PASSWORD: 5757
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+
